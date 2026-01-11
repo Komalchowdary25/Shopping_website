@@ -1,0 +1,96 @@
+/* PAGE BACKGROUND */
+.payment-wrapper {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff7ed, #ffedd5);
+    padding: 40px;
+}
+
+/* CARD */
+.payment-card {
+    background: #ffffff;
+    max-width: 520px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.15),
+        0 8px 20px rgba(0,0,0,0.1);
+
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+/* EMOJI */
+.emoji {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+/* TITLE */
+.payment-card h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ea580c;
+    margin-bottom: 14px;
+}
+
+/* TEXT */
+.main-text {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.funny-text {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* FUNNY BOX */
+.funny-box {
+    background: #fff7ed;
+    border-left: 6px solid #f97316;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #92400e;
+    margin-bottom: 22px;
+}
+
+.funny-box span {
+    display: block;
+    margin-top: 6px;
+    font-style: italic;
+    color: #7c2d12;
+}
+
+/* BUTTON */
+.back-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(249,115,22,0.4);
+}
+
+/* FLOATING ANIMATION */
+@keyframes floatCard {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}

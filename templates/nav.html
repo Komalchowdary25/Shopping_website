@@ -1,0 +1,58 @@
+<nav>
+    <div class="logo">
+        <h1>ShopSphere</h1>
+    </div>
+    <div class="links">
+        {% if request.user.is_authenticated %}
+            {% if profile_nav or update_profile_nav or reset_password_nav or cart_nav or knowus_nav or support_nav %}
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'cart' %}" class="cart-link">
+             CART
+            {% if cart_count > 0 %}
+                <span class="cart-badge"><h3>{{ cart_count }}</h3></span>
+            {% endif %}
+            </a>
+            <a href="{% url 'profile' %}">PROFILE({{request.user}})</a>
+            <a href="{% url 'logout_' %}">LOGOUT</a>
+            <a href="{% url 'knowus' %}">KNOWUS</a>
+            <a href="{% url 'support' %}">SUPPORT</a>
+            {% else %}
+                <form action="">
+                    <input type="text" name="product" placeholder="Search">
+                    <input type="submit" value="search">
+                </form>
+            <a href="{% url 'trending' %}">Trending</a>
+            <a href="{% url 'offers' %}">Offers</a>
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'cart' %}" class="cart-link">
+             CART
+            {% if cart_count > 0 %}
+                <span class="cart-badge"><h3>{{ cart_count }}</h3></span>
+            {% endif %}
+            </a>
+            <a href="{% url 'profile' %}">PROFILE({{request.user}})</a>
+            <a href="{% url 'logout_' %}">LOGOUT</a>
+            <a href="{% url 'knowus' %}">KNOWUS</a>
+            <a href="{% url 'support' %}">SUPPORT</a>
+            {% endif %}
+        {% else %}
+            {% if login_nav or register_nav or forget_password_nav or new_password_nav or knowus_nav or support_nav %}
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'login_' %}">Login</a>
+            <a href="{% url 'knowus' %}">Know Us</a>
+            <a href="{% url 'support' %}">Support</a>
+            {% else %}
+                <form action="">
+                    <input type="text" name="product" placeholder="Search">
+                    <input type="submit" value="search">
+                </form>
+            <a href="{% url 'trending' %}">Trending</a>
+            <a href="{% url 'offers' %}">Offers</a>
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'login_' %}">Login</a>
+            <a href="{% url 'knowus' %}">Know Us</a>
+            <a href="{% url 'support' %}">Support</a>
+            {% endif %}
+        {% endif %}
+    </div>
+</nav>

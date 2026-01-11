@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'login_.css' %}">
+{% endblock %}
+{% block content %}
+<div class="login-page">
+    <div class="login-card">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Login to continue shopping</p>
+
+        {{ error }}
+
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter your username">
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password">
+
+            <button type="submit">Login</button>
+
+            <div class="login-links">
+                <a href="{% url 'forget_password' %}">Forgot Password?</a>
+                <a href="{% url 'register' %}">Create Account</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+

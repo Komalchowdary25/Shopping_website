@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'cart.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="cart-page">
+
+    <!-- LEFT: CART ITEMS -->
+    <div class="cart-items">
+        {% for i in data %}
+        <div class="cart-item">
+            <div class="cart-img-wrapper">
+                <img src="{{ i.pimage.url }}" alt="{{ i.pname }}" height="200px" width="200px" class="cart-img">
+
+            </div>
+            <div class="cart-item-info">
+                <h3>{{ i.pname }}</h3>
+                <p class="category">{{ i.pcategory }}</p>
+                <p class="price">₹{{ i.price }}</p>
+
+                <div class="quantity-control">
+                    <a href="{% url 'decrease' i.id %}" class="qty-btn">−</a>
+                    <span class="qty">{{ i.quantity }}</span>
+                    <a href="{% url 'increase' i.id %}" class="qty-btn">+</a>
+                </div>
+
+                <p class="item-total">Item Total: ₹{{ i.totalprice }}</p>
+
+                <a href="{% url 'remove' i.id %}" class="remove-btn">Remove</a>
+            </div>
+
+        </div>
+        {% empty %}
+        <p class="empty-cart">Your cart is empty</p>
+        {% endfor %}
+    </div>
+
+    <!-- RIGHT: ORDER SUMMARY -->
+    <div class="order-summary">
+        <h3>Order Summary</h3>
+
+        <div class="summary-row">
+            <span>Total Items</span>
+            <span>{{ data|length }}</span>
+        </div>
+
+        <div class="summary-row total">
+            <span>Total Price</span>
+            <span>₹{{ TA }}</span>
+        </div>
+
+        <a href="{% url 'payment' %}" class="checkout-btn">Proceed to Checkout</a>
+    </div>
+
+</div>
+
+{% endblock %}

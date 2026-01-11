@@ -1,0 +1,71 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'knowus.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="knowus-container">
+
+    <h1 class="knowus-title">Know Us</h1>
+    <p class="knowus-subtitle">
+        More than shopping we’re building trust, convenience & quality.
+    </p>
+
+    <!-- ABOUT -->
+    <div class="knowus-card">
+        <h2>🛍️ Who We Are</h2>
+        <p>
+            <strong>ShopSphere</strong> is a modern e-commerce platform designed to make
+            online shopping simple, fast, and reliable.  
+            From electronics to fashion and daily essentials, we bring everything to
+            one place, just a click away.
+        </p>
+    </div>
+
+    <!-- MISSION -->
+    <div class="knowus-card">
+        <h2>🎯 Our Mission</h2>
+        <p>
+            Our mission is to provide high-quality products at honest prices,
+            delivered with speed and care while creating a smooth and enjoyable
+            shopping experience for every user.
+        </p>
+    </div>
+
+    <!-- WHY US -->
+    <div class="knowus-card">
+        <h2>⭐ Why Choose ShopSphere?</h2>
+        <ul>
+            <li>Carefully curated and trending products</li>
+            <li>Secure and user-friendly platform</li>
+            <li>Transparent pricing with exciting offers</li>
+            <li>Built using modern technologies</li>
+        </ul>
+    </div>
+
+    <!-- TECHNOLOGY -->
+    <div class="knowus-card">
+        <h2>💻 Built With Technology</h2>
+        <p>
+            ShopSphere is powered by <strong>Django</strong>, modern front-end design,
+            and scalable architecture to ensure performance, security, and reliability.
+        </p>
+    </div>
+
+    <!-- FUTURE -->
+    <div class="knowus-card highlight">
+        <h2>🚀 What’s Coming Next?</h2>
+        <p>
+            We’re actively working on secure payment gateways, order tracking,
+            personalized recommendations, and much more.
+            <br><br>
+            Stay tuned!! The best is yet to come!
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}

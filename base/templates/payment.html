@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'payment.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="payment-wrapper">
+
+    <div class="payment-card">
+        <div class="emoji">💳🚧</div>
+
+        <h1>Payment Gateway Taking a Tea Break ☕</h1>
+
+        <p class="main-text">
+            Oops! Our payment system is currently under construction.
+        </p>
+
+        <p class="funny-text">
+            The developers are busy teaching it how to count money 💸  
+            <br>
+            Please don’t worry — your cart is safe and sound 🛒✨
+        </p>
+
+        <div class="funny-box">
+            🧑‍💻 Engineers at work…  
+        </div>
+
+        <a href="{% url 'home' %}" class="back-btn">
+            ← Go Back & Continue Shopping
+         </a>
+    </div>
+
+</div>
+
+{% endblock %}

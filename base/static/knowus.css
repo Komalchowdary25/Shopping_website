@@ -1,0 +1,77 @@
+/* PAGE BACKGROUND */
+.knowus-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px 60px;
+}
+
+/* TITLE */
+.knowus-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.knowus-subtitle {
+    text-align: center;
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 40px;
+}
+
+/* CARDS */
+.knowus-card {
+    background: #ffffff;
+    padding: 28px 30px;
+    border-radius: 16px;
+    margin-bottom: 26px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.12),
+        0 4px 10px rgba(0,0,0,0.08);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.knowus-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 16px 35px rgba(0,0,0,0.18),
+        0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* HEADINGS */
+.knowus-card h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f97316;
+    margin-bottom: 12px;
+}
+
+/* TEXT */
+.knowus-card p {
+    font-size: 14.5px;
+    color: #374151;
+    line-height: 1.7;
+}
+
+/* LIST */
+.knowus-card ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.knowus-card ul li {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* HIGHLIGHT CARD */
+.knowus-card.highlight {
+    background: linear-gradient(135deg, #fff7ed, #ffedd5);
+    border-left: 6px solid #f97316;
+}

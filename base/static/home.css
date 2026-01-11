@@ -1,0 +1,233 @@
+/* PAGE BACKGROUND */
+body {
+    background-color: #f8f8f8;
+}
+
+/* CATEGORY BAR */
+.category-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 14px 30px;
+    background: #a24040e0;
+    border-bottom: 1px solid #e5e7eb;
+    overflow-x: auto;
+}
+.category-bar a{
+    text-decoration: none;
+    color: black;
+}
+
+.category-form input,
+.all-products {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.category-form input:hover,
+.all-products:hover {
+    background: #fde68a;
+}
+
+/* PAGE TITLE */
+.page-title {
+    font-size: 22px;
+    margin: 24px 30px 12px;
+    color: #111827;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);  /* ✅ exactly 6 per row */
+    gap: 20px;
+    padding: 20px 30px;
+}
+@media (max-width: 1400px) {
+    .product-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* PRODUCT CARD */
+.product-card {
+    background: #ffffff;              /* PURE WHITE */
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.12),
+        0 2px 6px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 14px 35px rgba(0, 0, 0, 0.18),
+        0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* PRODUCT IMAGE */
+.product-image {
+    position: relative;   /* KEY FIX */
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.product-image img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* PRODUCT INFO */
+.product-info {
+    padding: 14px;
+}
+
+.product-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.product-desc {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: 800;
+    color: #b45309;
+    margin-bottom: 12px;
+}
+
+/* ACTION BUTTONS */
+.product-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-cart {
+    flex: 1;
+    background: #f97316;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.btn-cart:hover {
+    background: #ea580c;
+}
+
+.btn-details {
+    flex: 1;
+    background: #f3f4f6;
+    color: #111827;
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-details:hover {
+    background: #e5e7eb;
+}
+
+/* NO PRODUCTS */
+.no-products {
+    text-align: center;
+    margin: 40px;
+    font-size: 16px;
+    color: #9ca3af;
+}
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+
+    color: #fff;
+    border-radius: 4px;
+
+    z-index: 20;
+
+    backdrop-filter: blur(4px);   /* premium look */
+    animation: badgeSlide 0.5s ease, badgePulse 2s infinite;
+}
+
+.offer-badge {
+    background: linear-gradient(90deg, #dc2626, #f97316);
+    box-shadow: 0 6px 14px rgba(220, 38, 38, 0.45);
+    margin-top: 20px;
+
+}
+.trend-badge {
+    background: linear-gradient(90deg, #2563eb, #6366f1);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45);
+    margin-top: 20px;
+}
+@keyframes badgeSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes badgePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
