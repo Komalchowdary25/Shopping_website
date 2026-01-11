@@ -1,0 +1,108 @@
+/* PAGE WRAPPER */
+.update-wrapper {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+}
+
+/* CARD */
+.update-card {
+    width: 420px;
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12),
+        0 4px 10px rgba(0,0,0,0.08);
+
+    animation: slideUp 0.6s ease;
+}
+
+/* TITLE */
+.update-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.update-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+/* FORM */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249,115,22,0.15);
+}
+
+.form-group input[readonly] {
+    background: #f3f4f6;
+    cursor: not-allowed;
+}
+
+/* HINT */
+.hint {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+/* BUTTON */
+.save-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(90deg, #f97316, #fb923c);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(249,115,22,0.4);
+}
+
+/* ANIMATION */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,116 @@
+.register-page {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff7ed, #ffedd5, #fde68a);
+}
+.register-card {
+    width: 420px;
+    padding: 35px 32px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.18),
+        inset 0 0 20px rgba(255, 255, 255, 0.35);
+
+    animation: popIn 0.8s ease;
+}
+.register-card h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #7c2d12;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+.register-card label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    display: block;
+    margin-bottom: 6px;
+}
+.register-card input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.8);
+
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.register-card input:focus {
+    border-color: #fb923c;
+    box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.25);
+}
+.register-card button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px;
+
+    background: linear-gradient(90deg, #f97316, #fb923c);
+    color: white;
+
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.register-card button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.45);
+}
+.login-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 18px;
+    color: #374151;
+}
+
+.login-text a {
+    color: #f97316;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}
+.register-card .error,
+.register-card p {
+    color: #dc2626;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

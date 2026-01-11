@@ -1,0 +1,135 @@
+/* PAGE BACKGROUND */
+.profile-page {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff3e0, #ffedd5);
+}
+
+/* PROFILE CARD */
+.profile-card {
+    width: 420px;
+    padding: 30px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* HEADER */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* K CIRCLE (SIMPLE & CLEAN) */
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #a7d32c, #22d3ee);
+    color: #020617;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: 800;
+
+    box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.9);
+}
+
+
+
+/* NAME */
+.profile-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+/* VERIFIED TEXT */
+.verified {
+    font-size: 13px;
+    color: #16a34a;
+    font-weight: 600;
+}
+
+/* DIVIDER */
+.profile-details {
+    margin-top: 18px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 16px;
+}
+
+/* DETAIL ROW */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+/* LABEL */
+.detail-row span:first-child {
+    color: #6b7280;
+    font-weight: 600;
+}
+
+/* VALUE */
+.detail-row span:last-child {
+    color: #111827;
+    font-weight: 600;
+}
+
+/* ACTION LINKS */
+.profile-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+/* BUTTON STYLE LINKS */
+.btn.update {
+    background: linear-gradient(90deg, #22d3ee, #38bdf8);
+    color: #020617;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+.btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn.reset {
+    background: linear-gradient(90deg, #fb7185, #f43f5e);
+    color: white;
+    box-shadow: 0 0 20px rgba(244, 63, 94, 0.6);
+}
+
+
+/* HOVER */
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+@keyframes neonPop {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
