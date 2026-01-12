@@ -12,5 +12,6 @@ urlpatterns=[
     path('increase/<int:pk>',increase,name='increase'),
     path('trending/',trending,name='trending'),
     path('offers/',offers,name='offers'),
-    path('payment/',payment,name='payment')
+    path('payment/',payment,name='payment'),
+    path('details/<int:pk>',details,name='details')
 ]

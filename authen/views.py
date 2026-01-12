@@ -11,7 +11,7 @@ def login_(request):
         auth_user=authenticate(username=username,password=password)
         if auth_user:
             login(request,auth_user)
-            return redirect('profile')
+            return redirect('home')
         else:
             return render(request,'login_.html',{'error':'Username or password are incorrect..!!'})
     return render(request,'login_.html',{'login_nav':True})

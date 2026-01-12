@@ -102,6 +102,10 @@ def offers(request):
 def payment(request):
     return render(request,'payment.html')
 
+def details(request,pk):
+    data=ProductsModel.objects.get(id=pk)
+    return render(request,'details.html',{'data':data})
+
 def knowus(request):
     count=0
     if request.user.is_authenticated:

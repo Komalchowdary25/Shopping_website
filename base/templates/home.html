@@ -22,7 +22,7 @@
 <h2 class="page-title">Recommended for You</h2> -->
 
 {% if nomatch %}
-    <p class="no-products">No Products Found</p>
+    <p class="no-products">No Products Found 🛒</p>
 {% else %}
 
 <!-- PRODUCT GRID -->
@@ -51,7 +51,7 @@
 
             <div class="product-actions">
                 <a href="{% url 'addtocart' i.id %}" class="btn-cart">Add to Cart</a>
-                <a href="#" class="btn-details">Details</a>
+                <a href="{% url 'details' i.id %}" class="btn-details">Details</a>
             </div>
         </div>
 
