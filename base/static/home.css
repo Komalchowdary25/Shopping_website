@@ -43,7 +43,7 @@ body {
 /* PRODUCT GRID */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);  /* ✅ exactly 6 per row */
+    grid-template-columns: repeat(6, 1fr);  
     gap: 20px;
     padding: 20px 30px;
 }
@@ -80,7 +80,7 @@ body {
 
 /* PRODUCT CARD */
 .product-card {
-    background: #ffffff;              /* PURE WHITE */
+    background: #ffffff;             
     border-radius: 20px;
     box-shadow: 
         0 8px 20px rgba(0, 0, 0, 0.12),
@@ -101,7 +101,7 @@ body {
 
 /* PRODUCT IMAGE */
 .product-image {
-    position: relative;   /* KEY FIX */
+    position: relative;   
     height: 200px;
     display: flex;
     align-items: center;
@@ -201,7 +201,7 @@ body {
 
     z-index: 20;
 
-    backdrop-filter: blur(4px);   /* premium look */
+    backdrop-filter: blur(4px);  
     animation: badgeSlide 0.5s ease, badgePulse 2s infinite;
 }
 
