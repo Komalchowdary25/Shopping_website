@@ -1,4 +1,4 @@
-ShopSphere – E-Commerce Web Application
+# ShopSphere – E-Commerce Web Application
 A full-stack e-commerce web application built using Python, Django, HTML, CSS, and SQLite that allows users to browse products, view product details, and experience a basic online shopping workflow. The application demonstrates Django’s MVT architecture, template rendering, static file handling, and database integration.
 
 Live Demo
